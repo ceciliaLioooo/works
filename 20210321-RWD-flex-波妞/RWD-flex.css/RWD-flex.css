@@ -1,0 +1,404 @@
+body{
+    margin: auto;
+    display: flex;
+    height: 100vh;
+}
+* {
+    box-sizing: border-box;
+  }
+.nav{
+    background-color:rgb(241, 227, 142);
+    /* 為何w不聽使喚?說好的300px? */
+    min-width: 300px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    border: black solid 3px;
+    transition: all 2s ease 0s;
+
+}
+.nav-logo{
+    background-color: lightslategray;
+    background-image: url(../img_RWD_flex/無臉男.jpg);
+    box-shadow: rgb(165, 142, 111) 5px 5px 5px;
+    background-size: 160%;
+    background-position: center;
+    border-radius: 50%;
+    border: solid 5px black;
+    border: steelblue 3px solid;
+    width: 100px;height: 100px;
+    margin-bottom: 50px; 
+}
+.menu{display: none;}
+.nav-intro{
+    width: 100px;height: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 40px;
+    
+}
+.intro-btn{
+    background-color: rgb(179, 144, 99);
+    box-shadow: rgb(165, 142, 111) 5px 5px 5px;
+    border-radius: 10px;
+    border: solid 3px black;
+    font-size: x-large;
+    color:black;
+    margin-bottom: 30px;
+}
+.intro-btn:hover{
+    display: block;
+    box-shadow: none;
+    transform: translate(5px,5px);
+    
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    background-color: lightskyblue;
+    /* 自動補齊剩下空間 */
+    height: 100vh;
+    flex: 1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    width: 800px;height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content-img{
+    width: calc(33% - 6px);
+    height: calc(100% - 6px);
+    background-size: cover;
+    border: black solid 3px;
+    transition: all 1s ease-in-out 0s;
+}
+.content-img1{
+    background-image:url(../img_RWD_flex/宗介3.jpg) ;
+    background-position: center;
+    }
+.content-img2{
+    background-image:url(../img_RWD_flex/宗介1.jpg) ;
+    background-position: center;}
+.content-img3{
+    background-image:url(../img_RWD_flex/宗介2.jpg) ;
+    background-position-x: -90px;
+    }
+
+
+@media (max-width:1280px)  { /* small-pc */
+    body{
+        margin: auto;
+        box-sizing:border-box;
+        display: flex;
+        transition-duration: 4s;
+    }
+    .nav{
+        min-height: 10px;
+        display: flex;    
+    }
+    .nav-logo{
+    }
+    .menu{display: none;}
+    .nav-intro{        
+    }
+    .intro-btn{
+    }
+    .intro-btn:hover{
+    }
+    
+    .container{
+        background-color: lightskyblue;
+        /* 無作用的h*/
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content{
+        /* background-color: blanchedalmond; */
+        flex-basis: 800px;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        
+    }
+    .content-img{
+        background-color: white;
+        background-size: cover;
+        flex-wrap: nowrap;
+        border: black solid 3px;
+        height: calc(50% - 5px);
+    }
+    .content-img1{
+        background-position: center;
+        background-size: cover;
+        width: 800px;
+        
+        margin-bottom: 5px;
+        }
+    .content-img2{
+        background-position: center;
+        width: 392px;
+        margin-right: 4px;
+        }
+    .content-img3{
+        background-position-x: 0px;
+        width: 392px;
+        }
+}
+@media(max-width:868px)  { /* Tablet */
+    body{
+        margin: auto;
+        box-sizing:border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav{
+        flex: 1;
+        height: 90px;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        /* display: flex; */
+        border: solid 3px black;
+    }
+    .nav-logo{
+        background-color: lightslategray;
+        background-size: 160%;
+        background-position: center;
+        border-radius: 50%;
+        border:black 5px solid;
+        width: 100px;height: 100px;
+        margin-bottom: 0px;
+    }
+    .menu{display: none;}
+    .nav-intro{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding-top: 10px;
+    }
+    .intro-btn{
+        background-color: tan;
+        box-shadow: rgb(165, 142, 111) 5px 5px;
+        border-radius: 10px;
+        border: black 3px solid;
+        font-size: x-large;
+        color:black;
+        margin-right: 10px;
+        /* margin-top: 10px; */
+    }
+    .intro-btn:hover{
+        background-image: url(./img_RWD_flex/無臉男2.jpeg);
+        background-size: cover;
+    }
+    a{
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .container{
+        background-color: lightskyblue;
+        /* 自動補齊剩下空間 */
+        float: 1;
+        flex: none;
+        display: flex;
+        height: calc(100vh - 140px);
+        /* height: 1200px; */
+        justify-content: center;
+        align-items: center;
+    }
+     .content{
+        /* min-width: calc(80% - 12px); */
+        flex-basis: 80%;
+        height: 478px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+    }
+    .content-img{
+        background-color: white;
+        background-size: cover;
+        
+        border: solid 3px black;
+    }
+    .content-img1{
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: calc(50% - 10px);
+        }
+    .content-img2{
+        background-position: center;
+        width: calc(50% - 8.5px);
+        height: calc(50% - 5px);
+        margin-right: 0px;
+        }
+    .content-img3{
+        background-position-x: 0px;
+        width: calc(50% - 8.5px);
+        height: calc(50% - 5px);
+        }
+
+
+}
+
+@media(max-width:675px) {   /* Phone */
+    body{
+        margin: auto;
+        display: flex;
+    }
+    *{box-sizing:border-box;}
+    .nav{
+        min-height: 120px;
+        display: flex;
+        position: relative;  
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .nav-logo{
+    }
+    .menu{
+        display: block;
+        background-image: url(../img_RWD_flex/導覽按鈕1.png);
+        background-size: cover;
+        width: 100px;height: 100px;    
+        margin-right: calc(50% - 123px);
+        
+    }
+    .menu:hover{
+        transition: 1s;
+        background-image: url(../img_RWD_flex/導覽按鈕2.png);
+        background-size: cover;
+        width: 100px;height: 100px;    
+    }
+
+     /* menu.nav-menu-btn:hover ~ .nav-menu{
+    display: flex;
+} 
+
+.nav-menu:hover {
+    display: flex;}  */
+
+    .nav-intro{
+        background-color: rgb(185, 218, 125);
+        border: 5px solid rgb(110, 129, 73);
+        border-radius: 30px;
+        width: 240px;height: 300px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 40px;
+        align-items: center;
+        position: absolute;
+        top:50px;
+        left: 50px;
+        opacity: 0;
+        z-index: -10;
+    }
+    .nav-intro:hover{
+        opacity: 1;
+        z-index: 10;
+        transition-duration: 1s;
+        background-color: rgb(185, 218, 125);
+        border: 5px solid rgb(110, 129, 73);
+        border-radius: 30px;
+        width: 240px;height: 300px;
+        
+        flex-direction: column;
+        text-align: center;
+        line-height: 40px;
+        align-items: center;
+        position: absolute;
+        top:80px;
+        left: 80px;
+    }
+    .intro-btn{
+        background-color: tan;
+        box-shadow: rgb(165, 142, 111) 5px 5px;
+        border-radius: 10px;
+        border: solid 3px black;
+        font-size: x-large;
+        color:black;
+        margin-bottom: 30px;
+    }
+    a{
+        width: 200px;
+    }
+    .menu:hover+.nav-intro{
+        opacity: 1;
+        z-index: 10;
+        transition-duration: 1s;
+        background-color: rgb(185, 218, 125);
+        border: 5px solid rgb(110, 129, 73);
+        border-radius: 30px;
+        width: 240px;height: 300px;
+        
+        flex-direction: column;
+        text-align: center;
+        line-height: 40px;
+        align-items: center;
+        position: absolute;
+        top:80px;
+        left: 80px;
+    }
+/* 
+    .intro-btn:hover{
+        opacity: 1;
+        z-index: 10;
+        background-color: tan;
+        box-shadow: rgb(165, 142, 111) 5px 5px;
+        border-radius: 10px;
+        border: solid 3px black;
+        font-size: x-large;
+        color:black;
+        margin-bottom: 30px;
+    } */
+
+
+
+
+    
+    .container{
+        background-color: lightskyblue;
+        flex: 1;
+        display: flex;
+        align-items:unset;
+    }
+    .content{
+        flex-basis: 100%;
+        flex-wrap: wrap;    
+        height: 100%;
+    }
+    .content-img{
+        background-color: white;
+        background-size: cover;
+        border: solid 3px black;
+        width: 100%;
+        align-items:stretch;
+    }
+    .content-img1{
+        background-position: center;
+        background-size: cover;
+        margin-bottom: unset;
+        }
+    .content-img2{
+        background-position: center;
+        }
+    .content-img3{
+        background-position-x: 0px;
+        }
+}

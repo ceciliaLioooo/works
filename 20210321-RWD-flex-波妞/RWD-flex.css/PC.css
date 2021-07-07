@@ -1,0 +1,93 @@
+body{
+    margin: auto;
+    display: flex;
+}
+* {
+    box-sizing: border-box;
+  }
+.nav{
+    background-color:lightgoldenrodyellow;
+    /* 為何w不聽使喚?說好的300px? */
+    min-width: 300px;
+    height: calc(100vh - 106px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    border: black solid 3px;
+
+}
+.nav-logo{
+    background-color: lightslategray;
+    background-image: url(../img_RWD_flex/無臉男.jpg);
+    background-size: 160%;
+    background-position: center;
+    border-radius: 50%;
+    border: solid 5px black;
+    border: steelblue 3px solid;
+    width: 100px;height: 100px;
+    margin-bottom: 50px;           
+
+}
+.menu{display: none;}
+.nav-intro{
+    /* background-color: lightslategray; */
+    width: 100px;height: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 40px;
+    
+}
+.intro-btn{
+    background-color: tan;
+    box-shadow: rgb(165, 142, 111) 5px 5px;
+    border-radius: 10px;
+    border: solid 3px black;
+    font-size: x-large;
+    color:black;
+    margin-bottom: 30px;
+}
+.intro-btn:hover{
+    background-image: url(../img_RWD_flex/無臉男2.jpeg);
+    background-size: cover;
+    background-position-x: 30px;
+    background-position-y: -20px;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    background-color: lightskyblue;
+    /* 自動補齊剩下空間 */
+    height: 100vh;
+    flex: 1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.content{
+    width: 800px;height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content-img{
+    width: calc(33% - 6px);
+    height: calc(100% - 6px);
+    background-size: cover;
+    border: black solid 3px;
+}
+.content-img1{
+    background-image:url(../img_RWD_flex/宗介3.jpg) ;
+    background-position: center;
+    }
+.content-img2{
+    background-image:url(../img_RWD_flex/宗介1.jpg) ;
+    background-position: center;}
+.content-img3{
+    background-image:url(../img_RWD_flex/宗介2.jpg) ;
+    background-position-x: -90px;
+    }
